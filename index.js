@@ -2,6 +2,7 @@
 const inquirer = require('inquirer');
 const {Triangle} = require("./lib/shapes");
 const {Square} = require("./lib/shapes");
+const {Circle} = require("./lib/shapes");
 
 
 function menu() {
@@ -40,6 +41,9 @@ function menu() {
         }
         if(response.shape === "square") {
             shape = new Square
+        }
+        if(response.shape === "circle") {
+            shape = new Circle
         }
         shape.setColor(response.shapeColor)
 

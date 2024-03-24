@@ -7,11 +7,10 @@ This repository contains two JavaScript files that work together utilizing Node.
 
 Node.js, Inquirer, and Jest
 
-## Demonstration Video
+## Link to Demonstration Video
 
-
-
+https://drive.google.com/file/d/1mnwiQxU97kmKI34pwmJcC6lcDyLFV6ka/view?usp=sharing
 
 ## Acknowledgments
 
-* My tutor Matthew Calimbas was incredibly helpful in assisting me in psudocoding and creating the proper file structure for my application
+* My tutor Matthew Calimbas was incredibly helpful in assisting me in psudocoding and creating the proper file structure for my application.

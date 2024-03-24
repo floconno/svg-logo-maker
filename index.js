@@ -38,11 +38,9 @@ function menu() {
         let shape;
         if(response.shape === "triangle") {
             shape = new Triangle
-        }
-        if(response.shape === "square") {
+        } else if (response.shape === "square") {
             shape = new Square
-        }
-        if(response.shape === "circle") {
+        } else {
             shape = new Circle
         }
         shape.setColor(response.shapeColor)

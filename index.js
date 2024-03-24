@@ -1,9 +1,7 @@
 
 const inquirer = require('inquirer');
-const {Triangle} = require("./lib/shapes");
-const {Square} = require("./lib/shapes");
-const {Circle} = require("./lib/shapes");
-
+const fs = require('fs');
+const {Triangle, Square, Circle} = require("./lib/shapes");
 
 function menu() {
     inquirer.prompt([
@@ -46,15 +44,19 @@ function menu() {
         shape.setColor(response.shapeColor)
 
         const svg = `
-        <svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+        <svg version="1.1" width="300" height="400" xmlns="http://www.w3.org/2000/svg">
 
         ${shape.render()}
 
-        <text x="150" y="125" font-size="60" text-anchor="middle" fill="${response.textColor}">${response.text}</text>
+        <text x="150" y="125" font-size="40" text-anchor="middle" fill="${response.textColor}">${response.text}</text>
 
         </svg>
         `
         console.log(svg);
+
+        fs.writeFile('logo.svg', svg, (err) =>
+        err ? console.log(err) : console.log('Generated logo.svg')
+      );
     }) 
 }
 

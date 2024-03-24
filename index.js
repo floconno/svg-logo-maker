@@ -32,7 +32,6 @@ function menu() {
         },
     ])
     .then(response => {
-        console.log(response);
         let shape;
         if(response.shape === "triangle") {
             shape = new Triangle
@@ -52,7 +51,6 @@ function menu() {
 
         </svg>
         `
-        console.log(svg);
 
         fs.writeFile('logo.svg', svg, (err) =>
         err ? console.log(err) : console.log('Generated logo.svg')
